@@ -9,7 +9,7 @@
   <title>Newsletter sign-up form with success message</title>
 </head>
 <body>
-  <main class="main-container not-visible">
+  <main id="main-container" class="main-container">
     <section class="content-section">
       <h1 class="title">
         Stay updated!
@@ -42,13 +42,17 @@
           And much more!
         </p>
       </div>
-
-      <p class="input-title">
-        Email address
-      </p>
+      <div class="input-title-and-error-message">
+        <p class="input-title">
+          Email address
+        </p>
+        <p id="error-message" class="error-message not-visible">
+          Valid email required
+        </p>
+      </div>
       <div class="input-and-button-container">
-        <input class="email-input" type="email" placeholder="email@company.com">
-        <div class="button">
+        <input id="email-input" class="email-input" type="email" placeholder="email@company.com">
+        <div id="button" class="button">
           <p class="button-text">
             Subscribe to monthly newsletter
           </p>
@@ -64,7 +68,7 @@
     </section>
   </main>
 
-  <div class="modal">
+  <div id="modal" class="modal not-visible">
     <div class="modal-img-container">
       <svg class="modal-img" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/>
         <path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g>
@@ -77,9 +81,10 @@
       A confirmation email has been sent to <span class="modal-mail">ash@loremcompany.com.</span> 
       Please open it and click the button inside to confirm your subscription.
     </p>
-    <div class="modal-button">
+    <div id="modal-button" class="modal-button">
       Dismiss message
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -66,12 +66,23 @@
             }
         }
 
-        .input-title{
-            color: $main-dark;
-            font-size: 12px;
-            font-weight: 700;
+        .input-title-and-error-message {
             margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+
+            .input-title,
+            .error-message {
+                color: $main-dark;
+                font-size: 12px;
+                font-weight: 700;
+            }
+
+            .error-message {
+                color: #FF6155;
+            }
         }
+
 
         .input-and-button-container {
             
@@ -96,6 +107,10 @@
                     letter-spacing: 0px;
                 }
 
+            }
+
+            .error-message {
+                background-color: hsl(4, 100%, 87%);
             }
 
             .button {
@@ -173,4 +188,15 @@
 
 .not-visible {
     display: none;
+}
+
+.error-class {
+    background-color: hsl(4, 100%, 93%);
+    outline: 1px solid #FF527B;
+    color: #FF527B;
+    &:focus {
+        border: none !important;
+        border: 1px solid #FF527B !important;
+        color: #FF527B !important;
+    }
 }
